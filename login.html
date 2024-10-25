@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Login/Signup Page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+      if (!localStorage.getItem('hasRedirected')) {
+          localStorage.setItem('hasRedirected', 'true');
+          window.location.href = 'landing.html';
+      }
+  </script>
+  </head>
+  <body>
+    <!-- Responsive Navbar -->
+    <header class="navbar">
+      <div class="company-name">Interdepartmental Platform</div>
+    </header>
+
+    <!-- Login/Signup Form Section -->
+    <div class="login-container">
+      <div class="login-form-container" id="login-form">
+        <h2>Login</h2>
+        <form action="#">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <a href="./index.html"><button type="submit">Login</button></a>
+        </form>
+        <div class="login-toggle-form">
+          <p class="login-link">
+            Don't have an account?
+            <a  href="#" onclick="showSignup()">Sign Up</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="login-form-container" id="signup-form" style="display: none">
+        <h2>Sign Up</h2>
+        <form action="#">
+          <input type="text" placeholder="Username" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <a href="./index.html"><button type="submit">Sign Up</button></a>
+        </form>
+        <div class="login-toggle-form">
+          <p class="login-link">
+            Already have an account? <a href="#" onclick="showLogin()">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript to Toggle Forms and Burger Menu -->
+    <script>
+      // Toggle between login and signup forms
+      function showSignup() {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("signup-form").style.display = "block";
+      }
+
+      function showLogin() {
+        document.getElementById("signup-form").style.display = "none";
+        document.getElementById("login-form").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
