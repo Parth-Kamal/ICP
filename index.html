@@ -146,6 +146,21 @@
             </div>
         </div>
 
+        <div id="chatbot-window" style="display: none;">
+            <div id="chatbot-header">
+                <h4>How can I help you?</h4>
+                <button id="close-button" onclick="toggleChat()">×</button>
+            </div>
+          
+            <div id="chatbot-messages"></div>
+          
+            <div id="chatbot-input-container">
+                <input type="text" id="chatbot-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+          </div>
+          
+
 
         <!-- Calendar Section -->
         <section id="calendar" class="section">
@@ -162,11 +177,12 @@
         <section id="profiles" class="section">
             <div class="container">
                 <h2>User Profiles</h2>
-                <button class="btn primary-btn" onclick="viewProfiles()">View Profiles</button>
+                <button class="btn primary-btn" onclick="viewProfile()">View Profiles</button>
                 <div id="profileList" class="card">
-                    <h3>Profiles</h3>
+                    
                     <ul>
-                        <!-- Profile Details -->
+                        <h1>Profile</h1>
+
                     </ul>
                 </div>
             </div>
@@ -235,6 +251,7 @@
     <script src='https://unpkg.com/fullcalendar@5.10.1/main.min.js'></script>
     <script src="script.js"></script>
     <script>
+
     //     function showSignup() {
     //     document.getElementById("login-form").style.display = "none";
     //     document.getElementById("signup-form").style.display = "block";
@@ -253,6 +270,13 @@
     //     navbar.classList.toggle("overlay-nav");
     //   }
     </script>
+    <script>
+        function viewProfile() {
+            window.location.href = 'profile.html';
+        }
+    </script>
+    <script src="api.js"></script>
+
 </body>
 </html>
 
