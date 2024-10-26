@@ -212,12 +212,20 @@ h2 {
   background-color: var(--light-blue);
 }
 
-.user-message,
+.user-message {
+  background-color: #aac7d8; /* Adjust to preferred color */
+  align-self: flex-end;
+}
+
 .bot-message {
   margin: 5px 0;
   padding: 10px;
   border-radius: 10px;
   max-width: 80%;
+  background-color: #44576d; /* Adjust to preferred color */
+  color: #ffffff;
+  align-self: flex-start;
+
 }
 
 .user-message {
@@ -760,3 +768,4 @@ nav {
 .privacy-notice a:hover {
   text-decoration: underline;
 }
+
