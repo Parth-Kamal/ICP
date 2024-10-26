@@ -141,98 +141,131 @@ const projectChart = new Chart(ctx, {
     });
 
     // Sample data for projects and resources
-const projectsData = {
-"nehru place": [
-        { name: "Commercial Area Renovation", status: "Ongoing" },
-        { name: "Street Lighting Upgrade", status: "Scheduled" },
-        { name: "Green Space Development", status: "Completed" }
-    ],
-    "saket": [
-        { name: "Road Widening Project", status: "Pending" },
-        { name: "Public Park Development", status: "Ongoing" },
-        { name: "Community Hall Construction", status: "Scheduled" }
-    ],
-    "kalkaji": [
-        { name: "Water Supply Improvement", status: "Ongoing" },
-        { name: "Waste Management System", status: "Scheduled" },
-        { name: "Underground Drainage Repair", status: "Ongoing" }
-    ],
-    "connaught place": [
-        { name: "Infrastructure Revamp", status: "Ongoing" },
-        { name: "Heritage Building Renovation", status: "Scheduled" },
-        { name: "Tourism and Signage Project", status: "Completed" }
-    ],
-    "hauz khas": [
-        { name: "Park Restoration", status: "Pending" },
-        { name: "Lake Cleaning Initiative", status: "Ongoing" },
-        { name: "Cultural Center Construction", status: "Scheduled" }
-    ],
-    "pitampura": [
-        { name: "Flyover Expansion", status: "Completed" },
-        { name: "Public Transportation Hub", status: "Ongoing" },
-        { name: "Road Beautification Project", status: "Pending" }
-    ],
-    "shahdara": [
-        { name: "Waste Management Facility", status: "Ongoing" },
-        { name: "Recycling Center Setup", status: "Scheduled" },
-        { name: "Traffic Signal Modernization", status: "Pending" }
-    ],
-    "azadpur": [
-        { name: "Market Area Renovation", status: "Pending" },
-        { name: "Parking Lot Expansion", status: "Scheduled" },
-        { name: "Pedestrian Walkway Construction", status: "Ongoing" }
-    ],
-    "faridabad": [
-        { name: "Highway Expansion", status: "Ongoing" },
-        { name: "Public Bus Depot Construction", status: "Scheduled" },
-        { name: "Metro Station Installation", status: "Ongoing" }
-    ],
-    "sadar bazaar": [
-        { name: "Traffic Decongestion", status: "Completed" },
-        { name: "Market Overhaul", status: "Scheduled" },
-        { name: "Street Vendor Regulation", status: "Pending" }
-    ],
-    "vasant vihar": [
-        { name: "Road Safety Improvements", status: "Ongoing" },
-        { name: "Traffic Signal Upgradation", status: "Completed" },
-        { name: "School Zone Safety Project", status: "Ongoing" }
-    ],
-    "civil lines": [
-        { name: "Gas Pipeline Development", status: "Pending" },
-        { name: "Electricity Grid Modernization", status: "Scheduled" },
-        { name: "Public Library Construction", status: "Ongoing" }
-    ],
-    "karol bagh": [
-        { name: "Market Electrification", status: "Ongoing" },
-        { name: "Shopping Complex Development", status: "Pending" },
-        { name: "Sewer Line Repair", status: "Ongoing" }
-    ],
-    "noida": [
-        { name: "Metro Station Construction", status: "Ongoing" },
-        { name: "Residential Complex Project", status: "Scheduled" },
-        { name: "IT Park Expansion", status: "Ongoing" }
-    ],
-    "india gate": [
-        { name: "Public Garden Expansion", status: "Completed" },
-        { name: "Security System Upgrade", status: "Scheduled" },
-        { name: "Visitor Information Center", status: "Pending" }
-    ],
-    "gurgaon": [
-        { name: "IT Park Development", status: "Pending" },
-        { name: "Corporate Office Complex", status: "Scheduled" },
-        { name: "Urban Transport Revamp", status: "Ongoing" }
-    ],
-    "okhla": [
-        { name: "Solar Power Plant Installation", status: "Ongoing" },
-        { name: "Renewable Energy Facility", status: "Pending" },
-        { name: "Green Industrial Zone Development", status: "Scheduled" }
-    ],
-    "cyber city": [
-        { name: "Smart City Project", status: "Scheduled" },
-        { name: "Data Center Construction", status: "Ongoing" },
-        { name: "AI-Driven Traffic Management", status: "Pending" }
-    ]
-};
+    const projectsData = {
+        "anand vihar": [
+            { name: "New Access Road", status: "Completed" }
+        ],
+        "ashok vihar": [
+            { name: "Roadside Park Construction", status: "Completed" }
+        ],
+        "badarpur": [
+            { name: "Water Distribution Pipeline", status: "Completed" }
+        ],
+        "bhangarh": [
+            { name: "Road Expansion Project", status: "Completed" }
+        ],
+        "chandni chowk": [
+            { name: "Bridge Rehabilitation", status: "Completed" },
+            { name: "Utility Works in Market", status: "Ongoing" }
+        ],
+        "chattarpur": [
+            { name: "Residential Area Resurfacing", status: "Completed" }
+        ],
+        "civil lines": [
+            { name: "Flyover Maintenance", status: "Completed" }
+        ],
+        "connaught place": [
+            { name: "Ring Road Expansion", status: "Completed" },
+            { name: "Sidewalk Improvements", status: "Completed" },
+            { name: "New Pedestrian Bridge", status: "Completed" },
+            { name: "Traffic Signal Installation", status: "Completed" }
+        ],
+        "dwarka": [
+            { name: "Main Boulevard Repair", status: "Completed" },
+            { name: "New Bus Lane Construction", status: "Completed" },
+            { name: "Pipeline Leak Repairs", status: "Completed" },
+            { name: "Bicycle Lane Development", status: "Completed" }
+        ],
+        "east patel nagar": [
+            { name: "Street Lighting Installation", status: "Completed" }
+        ],
+        "east of kailash": [
+            { name: "Underground Drainage", status: "Completed" }
+        ],
+        "faridabad road": [
+            { name: "New Highway Interchange", status: "Ongoing" }
+        ],
+        "greater noida road": [
+            { name: "Road Beautification Project", status: "Completed" }
+        ],
+        "janakpuri": [
+            { name: "Residential Road Upgrade", status: "Completed" }
+        ],
+        "karol bagh": [
+            { name: "Utility Relocation", status: "Completed" },
+            { name: "Main Street Renovation", status: "Completed" }
+        ],
+        "khyber pass": [
+            { name: "Ring Road Junction Revamp", status: "Ongoing" }
+        ],
+        "lajpat nagar": [
+            { name: "Water Supply Pipeline", status: "Completed" },
+            { name: "Drainage Improvement", status: "Completed" }
+        ],
+        "mehrauli": [
+            { name: "Major Pipeline Leak Repair", status: "Ongoing" }
+        ],
+        "najafgarh": [
+            { name: "New Service Road", status: "Completed" }
+        ],
+        "narela": [
+            { name: "Water Treatment Pipeline", status: "Completed" }
+        ],
+        "nehru place": [
+            { name: "Gas Pipeline Replacement", status: "Completed" }
+        ],
+        "okhla": [
+            { name: "Industrial Pipeline Works", status: "Completed" }
+        ],
+        "old rajendra nagar": [
+            { name: "Water Line Connection", status: "Completed" }
+        ],
+        "patel nagar": [
+            { name: "Flyover Construction", status: "Ongoing" },
+            { name: "Main Avenue Redesign", status: "Completed" }
+        ],
+        "punjabi bagh": [
+            { name: "New Pipeline for Water Supply", status: "Completed" },
+            { name: "Elevated Road Construction", status: "Ongoing" }
+        ],
+        "rajouri garden": [
+            { name: "Overhead Water Tank", status: "Completed" }
+        ],
+        "ramesh nagar": [
+            { name: "Major Junction Upgrade", status: "Completed" }
+        ],
+        "rohini": [
+            { name: "Sector Road Widening", status: "Ongoing" }
+        ],
+        "saket": [
+            { name: "Stormwater Management System", status: "Completed" },
+            { name: "Metro Line Extension", status: "Completed" }
+        ],
+        "shakurpur": [
+            { name: "Sewer Line Rehabilitation", status: "Completed" }
+        ],
+        "shalimar bagh": [
+            { name: "Sewage Line Upgrade", status: "Completed" },
+            { name: "Pipeline Replacement Project", status: "Completed" }
+        ],
+        "south delhi": [
+            { name: "Pipeline Inspection", status: "Completed" }
+        ],
+        "south extension": [
+            { name: "New Pipeline Installation", status: "Completed" }
+        ],
+        "uttam nagar": [
+            { name: "Road Widening Project", status: "Completed" }
+        ],
+        "various locations": [
+            { name: "Temporary Road Closures", status: "Completed" },
+            { name: "Green Corridor Initiative", status: "Completed" }
+        ],
+        "vasant kunj": [
+            { name: "Road Resurfacing", status: "Completed" }
+        ]
+    };
+    
 
 const resourcesData = {
     "Excavator": "Available",
@@ -390,6 +423,31 @@ document.getElementById("close-button").addEventListener("click", toggleChat);
         documentList.appendChild(listItem);
     };
 
+    document.getElementById("officialProfileForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const profileData = {
+            name: document.getElementById("name").value,
+            designation: document.getElementById("designation").value,
+            department: document.getElementById("department").value,
+            employeeId: document.getElementById("employeeId").value,
+            photo: document.getElementById("photo").files[0],
+            departmentLogo: document.getElementById("departmentLogo").files[0],
+            govEmblem: document.getElementById("govEmblem").files[0],
+            address: document.getElementById("address").value,
+            issueDate: document.getElementById("issueDate").value,
+            expirationDate: document.getElementById("expirationDate").value,
+            contact: document.getElementById("contact").value,
+            email: document.getElementById("email").value,
+            securityFeature: document.getElementById("securityFeature").files[0],
+            signature: document.getElementById("signature").files[0]
+        };
+        
+        console.log("Profile Submitted:", profileData);
+        alert("Profile submitted successfully!");
+    });
+    
+
     // Forum Posting Function
     window.addPost = function () {
         const forumPosts = document.getElementById("forumPosts");
@@ -457,3 +515,150 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", closeMenu);
     });
 });
+
+// // Function to create a chat session
+// async function createChatSession(apiKey, externalUserId) {
+//     const response = await fetch('https://api.on-demand.io/chat/v1/sessions', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'apikey': apiKey
+//       },
+//       body: JSON.stringify({
+//         pluginIds: [],
+//         externalUserId: externalUserId
+//       })
+//     });
+  
+//     const data = await response.json();
+//     return data.data.id; // Extract session ID
+//   }
+  
+//   // Function to submit a query using the session ID
+//   async function submitQuery(apiKey, sessionId, query) {
+//     const response = await fetch(`https://api.on-demand.io/chat/v1/sessions/${sessionId}/query`, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'apikey': apiKey
+//       },
+//       body: JSON.stringify({
+//         endpointId: 'predefined-openai-gpt4o',
+//         query: query,
+//         pluginIds: ['plugin-1713962163'],
+//         responseMode: 'sync'
+//       })
+//     });
+  
+//     const data = await response.json();
+//     return data;
+//   }
+  
+//   // Function to handle sending a message to the chatbot
+//   async function handleChatbotMessage() {
+//     const apiKey = 'hP7Gr5SrtLG9wUtsLu1SIH5bgc3AKxMG0c';           // Replace with your API key
+//     const externalUserId = '671b34d8478aa20e0cca4c0c'; // Replace with a unique user ID
+//     const query = document.getElementById("chatbot-input").value;
+  
+//     try {
+//       const sessionId = await createChatSession(apiKey, externalUserId);
+//       const response = await submitQuery(apiKey, sessionId, query);
+//       if (response && response.result) {
+//         appendMessage("bot", response.result); // Display chatbot response
+//       } else {
+//         appendMessage("bot", "The chatbot response is empty.");
+//       }
+//       appendMessage("bot", response.result); // Display chatbot response
+//     } catch (error) {
+//       console.error('Error:', error);
+//       appendMessage("bot", "There was an error connecting to the chatbot.");
+//     }
+//   }
+  
+//   // Event handler to send user message
+//   function sendMessage(event) {
+//     if (event.type === "keypress" && event.key !== "Enter") return;
+  
+//     const inputField = document.getElementById("chatbot-input");
+//     const message = inputField.value.trim();
+//     if (message === "") return;
+  
+//     appendMessage("user", message);
+//     inputField.value = ""; // Clear the input field
+//     handleChatbotMessage(); // Send the message to the chatbot
+//   }
+  
+//   // Append message to chat window
+//   function appendMessage(sender, message) {
+//     const chatbotMessages = document.getElementById("chatbot-messages");
+//     const messageElement = document.createElement("div");
+//     messageElement.classList.add(sender === "user" ? "user-message" : "bot-message");
+//     messageElement.textContent = message;
+//     chatbotMessages.appendChild(messageElement);
+//     chatbotMessages.scrollTop = chatbotMessages.scrollHeight; 
+//   }
+  
+//   // Toggle chatbot window visibility
+//   function toggleChat() {
+//     const chatbotWindow = document.getElementById("chatbot-window");
+//     chatbotWindow.style.display = chatbotWindow.style.display === "none" ? "flex" : "none";
+//   }
+  
+//   // Initialize event listeners
+//   document.getElementById("chatbot-button").addEventListener("click", toggleChat);
+//   document.getElementById("chatbot-input").addEventListener("keypress", sendMessage);
+//   document.getElementById("send-button").addEventListener("click", sendMessage);
+//   document.getElementById("close-button").addEventListener("click", toggleChat);
+  
+// // Function to create a chat session
+// async function createChatSession(apiKey, externalUserId) {
+//     const response = await fetch('https://api.on-demand.io/chat/v1/sessions', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'apikey': apiKey
+//       },
+//       body: JSON.stringify({
+//         pluginIds: [],
+//         externalUserId: externalUserId
+//       })
+//     });
+  
+//     const data = await response.json();
+//     return data.data.id; // Extract session ID
+//   }
+  
+//   // Function to submit a query using the session ID
+//   async function submitQuery(apiKey, sessionId, query) {
+//     const response = await fetch(`https://api.on-demand.io/chat/v1/sessions/${sessionId}/query`, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'apikey': apiKey
+//       },
+//       body: JSON.stringify({
+//         endpointId: 'predefined-openai-gpt4o',
+//         query: query,
+//         pluginIds: ['plugin-1713962163'],
+//         responseMode: 'sync'
+//       })
+//     });
+  
+//     const data = await response.json();
+//     return data;
+//   }
+  
+//   // Example usage
+//   (async () => {
+//     const apiKey = 'hP7Gr5SrtLG9wUtsLu1SIH5bgc3AKxMG';
+//     const externalUserId = '671b34d8478aa20e0cca4c0c';
+//     const query = 'Put your query here';
+  
+//     try {
+//       const sessionId = await createChatSession(apiKey, externalUserId);
+//       const response = await submitQuery(apiKey, sessionId, query);
+//       console.log(response);
+//     } catch (error) {
+//       console.error('Error:', error);
+//     }
+//   })();
