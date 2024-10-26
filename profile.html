@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Official Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-form-container">
+        <h2>Official Profile Information</h2>
+        <form id="officialProfileForm">
+            <label for="name">Official's Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" required>
+
+            <label for="department">Department/Division:</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="employeeId">Employee ID Number:</label>
+            <input type="text" id="employeeId" name="employeeId" required>
+
+            <label for="photo">Photograph:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="departmentLogo">Department Logo/Seal:</label>
+            <input type="file" id="departmentLogo" name="departmentLogo" accept="image/*" required>
+
+            <label for="govEmblem">Government Emblem:</label>
+            <input type="file" id="govEmblem" name="govEmblem" accept="image/*" required>
+
+            <label for="address">Office Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="issueDate">Date of Issue:</label>
+            <input type="date" id="issueDate" name="issueDate" required>
+
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="date" id="expirationDate" name="expirationDate" required>
+
+            <label for="contact">Contact Information:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="email">Official Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="securityFeature">Security Feature (QR code, Barcode, etc.):</label>
+            <input type="file" id="securityFeature" name="securityFeature" accept="image/*" required>
+
+            <label for="signature">Signature:</label>
+            <input type="file" id="signature" name="signature" accept="image/*" required>
+
+            <button type="submit">Submit Profile</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("officialProfileForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents actual form submission
+            window.location.href = 'index.html'; // Redirect to index page after submitting
+        });
+    </script>
+</body>
+</html>
